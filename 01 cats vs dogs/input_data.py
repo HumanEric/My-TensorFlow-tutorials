@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 import os
 
-train_dir = '/home/dataset/kaggle/dog_cat/train/'
+train_dir = '/home/dataset/kaggle/train/'
 
 def get_files(file_dir):
     '''
@@ -40,7 +40,6 @@ def get_files(file_dir):
     return image_list, label_list
 
 
-#%%
 
 def get_batch(image, label, image_W, image_H, batch_size, capacity):
     '''
@@ -96,7 +95,7 @@ def get_batch(image, label, image_W, image_H, batch_size, capacity):
 
 
  
-#%% TEST
+# TEST
 # To test the generated batches of images
 # When training the model, DO comment the following codes
 
@@ -107,10 +106,10 @@ def get_batch(image, label, image_W, image_H, batch_size, capacity):
 #
 #BATCH_SIZE = 2
 #CAPACITY = 256
-#IMG_W = 208
-#IMG_H = 208
+#IMG_W = 224
+#IMG_H = 224
 #
-#train_dir = '/home/kevin/tensorflow/cats_vs_dogs/data/train/'
+#train_dir = '/home/dataset/kaggle/train/'
 #
 #image_list, label_list = get_files(train_dir)
 #image_batch, label_batch = get_batch(image_list, label_list, IMG_W, IMG_H, BATCH_SIZE, CAPACITY)
@@ -137,9 +136,6 @@ def get_batch(image, label, image_W, image_H, batch_size, capacity):
 #    finally:
 #        coord.request_stop()
 #    coord.join(threads)
-
-
-#%%
 
 
 
